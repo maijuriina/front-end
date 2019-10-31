@@ -2,6 +2,10 @@
   width: 30%;
   margin: auto;
   display: block;
+  background-color: darkcyan;
+  padding: 20px 15px;
+  border-right: 3px solid darkslategrey;
+  border-bottom: 3px solid darkslategrey;
 }
 
 .calcBtn {
@@ -11,10 +15,22 @@
 .calcScreen {
   background-color: dimgray;
   color: aquamarine;
-  width: 90%;
+  width: 92%;
   height: 40px;
   margin: auto;
   display: block;
+  font-size: 30px;
   line-height: 40px;
-  font-size: 40px;
+  text-align: right;
+  font-family: Roboto, monospace;
+  border-right: 3px solid darkslategrey;
+  border-bottom: 3px solid darkslategrey;
+}
+
+p {
+  padding: 10px;
+}
+
+.gridContainer {
+  padding-top: 20px;
 }
