@@ -1,1 +1,8 @@
-<p>{{buttons[0]}}calculator works!</p>
+<div class="calc">
+  <div class="calcScreen"><p>result</p></div>
+<mat-grid-list cols="4" rowHeight="2:1">
+  <mat-grid-tile *ngFor="let button of buttons">
+    <button class="calcBtn" mat-raised-button>{{button}}</button>
+  </mat-grid-tile>
+</mat-grid-list>
+</div>
