@@ -1,0 +1,6 @@
+<div class="body"><h1>Questions</h1>
+  <div class="questionCard" *ngFor="let feedback of feedbackItemsList">
+    <mat-card>{{feedback.question}}<br>
+      <mat-slider color="primary" min="1" max="5" value="0"></mat-slider>
+    </mat-card></div>
+</div>
