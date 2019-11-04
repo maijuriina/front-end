@@ -12,6 +12,11 @@
   padding: 5px;
 }
 
+.operatBtn {
+  padding: 5px;
+  background-color: aquamarine;
+}
+
 .calcScreen {
   background-color: dimgray;
   color: aquamarine;

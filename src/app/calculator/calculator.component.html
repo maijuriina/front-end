@@ -3,7 +3,8 @@
   <div class="gridContainer">
     <mat-grid-list cols="4" rowHeight="2:1">
       <mat-grid-tile *ngFor="let button of buttons">
-        <button class="calcBtn" mat-raised-button (click)="pressKey(button)">{{button}}</button>
+        <button *ngIf="button === '/' || button === '+' || button === '*' || button === '-' || button === '=' || button === 'C'" class="operatBtn" mat-raised-button (click)="pressKey(button)">{{button}}</button>
+        <button *ngIf="button !== '/' && button !== '+' && button !== '*' && button !== '-' && button !== '=' && button !== 'C'" class="calcBtn" mat-raised-button (click)="pressKey(button)">{{button}}</button>
       </mat-grid-tile>
     </mat-grid-list>
   </div>
