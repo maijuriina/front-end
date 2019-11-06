@@ -20,8 +20,13 @@ export class CalculatorComponent implements OnInit {
         this.calculation.endsWith('+') || this.calculation.endsWith('-')) {
         alert('Syötä laskutoimituksen viimeinen luku!');
       } else {
-        // tslint:disable-next-line:no-eval
-        this.calculation = eval(this.calculation);
+        try {
+          // tslint:disable-next-line:no-eval
+          this.calculation = eval(this.calculation);
+        } catch {
+          alert('Laskutoimitus ei voi alkaa kerto- tai jakolaskulla!');
+          this.calculation = '';
+        }
       }
     } else if (inputValue === '/' || inputValue === '*' || inputValue === '+' || inputValue === '-') {
       if (this.calculation.endsWith('/') || this.calculation.endsWith('*') ||

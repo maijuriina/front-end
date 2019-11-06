@@ -8,4 +8,5 @@ export class Feedbackitem {
     this.answer = answer;
     this.answerList = ['Not yet answered', 'Bad', 'Meh', 'Okay', 'Good'];
   }
+
 }
