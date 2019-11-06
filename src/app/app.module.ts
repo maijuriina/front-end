@@ -8,6 +8,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatButtonModule} from '@angular/material/button';
 import { FeedbackComponent } from './feedback/feedback.component';
 import {MatCardModule, MatSliderModule} from '@angular/material';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {MatCardModule, MatSliderModule} from '@angular/material';
     MatGridListModule,
     MatButtonModule,
     MatSliderModule,
-    MatCardModule
+    MatCardModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
