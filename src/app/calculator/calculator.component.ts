@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {clearElement} from '@angular/cdk/testing';
-import {$} from 'protractor';
 
 @Component({
   selector: 'app-calculator',

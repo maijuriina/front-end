@@ -1,3 +1,14 @@
+header {
+  font-family: Constantia, serif;
+  width: 100%;
+  display: block;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+}
+
 .calc {
   width: 30%;
   margin: auto;

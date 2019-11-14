@@ -1,0 +1,120 @@
+<div class="body">
+  <header>
+    <h1>Template form</h1>
+  </header>
+  <mat-card>
+    <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+
+      <mat-form-field>
+        <input matInput placeholder="First name" id="firstName" [(ngModel)]="person.firstName" name="firstName"
+               #name="ngModel" required minlength="2" pattern="[A-Öa-ö ]*">
+      </mat-form-field>
+      <div *ngIf="name.invalid && (name.dirty || name.touched)"
+           class="alert alert-danger">
+        <div *ngIf="name.errors.required">
+          <p class="alert">Name is required.</p>
+        </div>
+        <div *ngIf="name.errors.minlength">
+          <p class="alert">Name must be at least 2 characters long.</p>
+        </div>
+        <div *ngIf="name.errors.pattern">
+          <p class="alert">Name must contain letters only.</p>
+        </div>
+      </div>
+      <br>
+
+      <mat-form-field>
+        <input matInput placeholder="Last name" id="lastName" [(ngModel)]="person.lastName" name="lastName"
+               #lastname="ngModel" required minlength="2" pattern="[A-Öa-ö ]*">
+      </mat-form-field>
+      <div *ngIf="lastname.invalid && (lastname.dirty || lastname.touched)"
+           class="alert alert-danger">
+        <div *ngIf="lastname.errors.required">
+          <p class="alert">Last name is required.</p>
+        </div>
+        <div *ngIf="lastname.errors.minlength">
+          <p class="alert">Last name must be at least 2 characters long.</p>
+        </div>
+        <div *ngIf="lastname.errors.pattern">
+          <p class="alert">Last name must contain letters only.</p>
+        </div>
+      </div>
+      <br>
+
+      <mat-form-field>
+        <input matInput placeholder="ID number" id="id" [(ngModel)]="person.id" name="id" #id="ngModel" required
+               pattern="^(0[1-9]|[12]\d|3[01])(0[1-9]|1[0-2])([5-9]\d\+|\d\d-|[01]\dA)\d{3}[\dA-Z]$">
+      </mat-form-field>
+      <div *ngIf="id.invalid && (id.dirty || id.touched)"
+           class="alert alert-danger">
+        <div *ngIf="id.errors.required">
+          <p class="alert">Id is required.</p>
+        </div>
+        <div *ngIf="id.errors.pattern">
+          <p class="alert">Id is not valid.</p>
+        </div>
+      </div>
+      <br>
+
+      <mat-form-field>
+        <input matInput placeholder="Email" id="email" [(ngModel)]="person.email" name="email" #email="ngModel" required
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+      </mat-form-field>
+      <div *ngIf="email.invalid && (email.dirty || email.touched)"
+           class="alert alert-danger">
+        <div *ngIf="email.errors.required">
+          <p class="alert">Email is required.</p>
+        </div>
+        <div *ngIf="email.errors.pattern">
+          <p class="alert">Invalid email address.</p>
+        </div>
+      </div>
+      <br>
+
+      <mat-form-field>
+        <input matInput placeholder="Username" id="userName" [(ngModel)]="person.username" name="userName"
+               #username="ngModel" required minlength="6">
+      </mat-form-field>
+      <div *ngIf="username.invalid && (username.dirty || username.touched)"
+           class="alert alert-danger">
+        <div *ngIf="username.errors.required">
+          <p class="alert">Username is required.</p>
+        </div>
+        <div *ngIf="username.errors.minlength">
+          <p class="alert">Username must be at least 6 characters long.</p>
+        </div>
+      </div>
+      <br>
+
+      <mat-form-field>
+        <input matInput placeholder="Password" id="password" type="password" [(ngModel)]="person.password" name="password" required
+               #password="ngModel" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}">
+      </mat-form-field>
+      <div *ngIf="password.invalid && (password.dirty || password.touched)"
+           class="alert alert-danger">
+        <div *ngIf="password.errors.required">
+          <p class="alert">Password is required.</p>
+        </div>
+        <div *ngIf="password.errors.pattern">
+          <p class="alert">Password must be at least 10 characters long with at least one number, one uppercase and lowercase letter.</p>
+        </div>
+      </div>
+      <br>
+
+      <mat-form-field>
+        <input matInput placeholder="Confirm password" id="confirmPw" type="password" [(ngModel)]="person.confirmPw" name="confirmPw" required
+               #confirmPw="ngModel" pattern="{{password.value}}">
+      </mat-form-field>
+      <div *ngIf="confirmPw.invalid && (confirmPw.dirty || confirmPw.touched)"
+           class="alert alert-danger">
+        <div *ngIf="confirmPw.errors.pattern">
+          <p class="alert">Password does not match.</p>
+        </div>
+      </div>
+      <br>
+      <mat-checkbox color="primary" id="termsAndConditions" [(ngModel)]="person.termsAndConditions" ngModel required name="accept">
+        <p>I accept the terms and conditions</p></mat-checkbox>
+    </form>
+    <button mat-raised-button color="accent" type="submit" class="btn btn-success" [disabled]="!form.valid">Submit</button>
+  </mat-card>
+</div>

@@ -1,8 +1,8 @@
 <div class="body">
-  <div class="headerBox">
+  <header>
     <h1>Questions</h1>
-  </div>
-  <div class="questionCard" *ngFor="let feedback of feedbackItemsList, let i = index">
+  </header>
+  <div class="questionCard" *ngFor="let feedback of feedbackItemsList">
     <mat-card>
       <mat-card-header>
         <mat-card-title>{{feedback.question}}</mat-card-title>

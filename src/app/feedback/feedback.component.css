@@ -2,13 +2,15 @@
   width: 100%;
 }
 
-.headerBox {
+header {
+  width: 100%;
   display: block;
   margin: auto;
 }
 
 h1 {
-  font-family: Arial, serif;
+  font-family: Constantia, serif;
+  text-align: center;
 }
 
 mat-slider {
@@ -16,6 +18,7 @@ mat-slider {
 }
 
 mat-card {
+  font-family: Constantia, serif;
   width: 500px;
   padding: 10px;
   margin: auto;
