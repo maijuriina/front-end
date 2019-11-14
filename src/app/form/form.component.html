@@ -115,6 +115,6 @@
       <mat-checkbox color="primary" id="termsAndConditions" [(ngModel)]="person.termsAndConditions" ngModel required name="accept">
         <p>I accept the terms and conditions</p></mat-checkbox>
     </form>
-    <button mat-raised-button color="accent" type="submit" class="btn btn-success" [disabled]="!form.valid">Submit</button>
+    <button mat-raised-button color="accent" type="submit" class="btn btn-success" [disabled]="!form.valid" (click)="onSubmit(form)">Submit</button>
   </mat-card>
 </div>
