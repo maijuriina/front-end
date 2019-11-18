@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Person } from './person';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-form',
@@ -10,7 +11,7 @@ import { Person } from './person';
 export class FormComponent implements OnInit {
   person: Person;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit() {
     this.person = new Person();
@@ -19,6 +20,7 @@ export class FormComponent implements OnInit {
   onSubmit(form) {
     console.log(form.value.firstName);
     console.log(form.controls.firstName.status);
+    this.router.navigate(['calculator']);
   }
 }
 

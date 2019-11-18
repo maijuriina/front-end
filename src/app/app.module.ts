@@ -9,8 +9,10 @@ import {MatButtonModule} from '@angular/material/button';
 import { FeedbackComponent } from './feedback/feedback.component';
 import {MatCardModule, MatCheckboxModule, MatFormFieldModule, MatIconModule, MatInputModule, MatSliderModule} from '@angular/material';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { FormComponent } from './form/form.component';
+import { FormComponent } from './template-form/form.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     CalculatorComponent,
     FeedbackComponent,
     FormComponent,
+    ReactiveFormComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +36,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     MatIconModule,
-    MatCheckboxModule
+    MatCheckboxModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
