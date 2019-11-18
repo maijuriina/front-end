@@ -71,6 +71,10 @@ export class ReactiveFormComponent implements OnInit {
     return this.profileForm.get('confirmPwd');
   }
 
+  get termsAndConditions() {
+    return this.profileForm.get('termsAndConditions');
+  }
+
   onSubmit(reactForm: FormGroupDirective) {
     console.log('Form sent!');
     console.log(reactForm.value.firstName);

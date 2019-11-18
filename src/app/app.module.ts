@@ -13,6 +13,12 @@ import { FormComponent } from './template-form/form.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import {RouterModule, Routes} from '@angular/router';
+
+const appRoutes: Routes = [
+  { path: 'calculator', component: CalculatorComponent },
+  { path: 'feedback', component: FeedbackComponent}
+]
 
 @NgModule({
   declarations: [
@@ -37,6 +43,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     ReactiveFormsModule,
     MatIconModule,
     MatCheckboxModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
