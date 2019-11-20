@@ -7,18 +7,22 @@ import { CalculatorComponent } from './calculator/calculator.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatButtonModule} from '@angular/material/button';
 import { FeedbackComponent } from './feedback/feedback.component';
-import {MatCardModule, MatCheckboxModule, MatFormFieldModule, MatIconModule, MatInputModule, MatSliderModule} from '@angular/material';
+import {
+  MatCardModule,
+  MatCheckboxModule,
+  MatFormFieldModule,
+  MatIconModule,
+  MatInputModule, MatListModule,
+  MatSidenavModule,
+  MatSliderModule, MatSlideToggleModule
+} from '@angular/material';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { FormComponent } from './template-form/form.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import {RouterModule, Routes} from '@angular/router';
-
-const appRoutes: Routes = [
-  { path: 'calculator', component: CalculatorComponent },
-  { path: 'feedback', component: FeedbackComponent}
-]
+import { SidenavComponent } from './sidenav/sidenav.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +32,7 @@ const appRoutes: Routes = [
     FormComponent,
     ReactiveFormComponent,
     PageNotFoundComponent,
+    SidenavComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,7 +48,9 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     MatIconModule,
     MatCheckboxModule,
-    RouterModule
+    RouterModule,
+    MatSidenavModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,7 +1,7 @@
 <div class="body">
   <mat-card>
     <mat-card-title>Reactive form</mat-card-title>
-    <form [formGroup]="profileForm" (ngSubmit)="onSubmit(reactForm)" #reactForm="ngForm">
+    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
       <div class="form-group">
         <mat-form-field>
           <input matInput placeholder="First name" class="form-control" id="firstName" name="firstName"
@@ -85,6 +85,6 @@
       <mat-checkbox required color="primary" id="termsAndConditions" class="form-control" formControlName="termsAndConditions" name="termsAndConditions">
         <p>I accept the terms and conditions</p></mat-checkbox>
     </form>
-    <button mat-raised-button color="accent" type="submit" class="btn btn-success" [disabled]="!profileForm.valid" (click)="onSubmit(reactForm)">Submit</button>
+    <button mat-raised-button color="accent" type="submit" class="btn btn-success" [disabled]="!profileForm.valid" (click)="onSubmit()">Submit</button>
   </mat-card>
 </div>

@@ -75,8 +75,8 @@ export class ReactiveFormComponent implements OnInit {
     return this.profileForm.get('termsAndConditions');
   }
 
-  onSubmit(reactForm: FormGroupDirective) {
+  onSubmit() {
     console.log('Form sent!');
-    console.log(reactForm.value.firstName);
+    console.log(this.profileForm.value.firstName);
   }
 }

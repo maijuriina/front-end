@@ -1,0 +1,14 @@
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')"
+               (closed)="events.push('close!')">
+    <mat-nav-list>
+      <a mat-list-item routerLink="/calculator" routerLinkActive="active"><mat-icon>dialpad</mat-icon>Calculator</a>
+      <a mat-list-item routerLink="/feedback" routerLinkActive="active"><mat-icon>comment</mat-icon> Feedback</a>
+      <a mat-list-item routerLink="/form" routerLinkActive="active"><mat-icon>description</mat-icon> Template form</a>
+      <a mat-list-item routerLink="/reactiveForm" routerLinkActive="active"><mat-icon>description</mat-icon> Reactive form</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <button mat-button color="primary" [(ngModel)]="opened" (click)="sidenav.toggle()"><mat-icon class="menu">menu</mat-icon></button>
+  </mat-sidenav-content>
+</mat-sidenav-container>

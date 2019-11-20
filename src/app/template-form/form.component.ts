@@ -11,7 +11,8 @@ import { Router } from '@angular/router';
 export class FormComponent implements OnInit {
   person: Person;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) {
+  }
 
   ngOnInit() {
     this.person = new Person();

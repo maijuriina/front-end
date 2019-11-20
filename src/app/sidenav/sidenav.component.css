@@ -1,0 +1,22 @@
+mat-sidenav-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 15%;
+}
+
+button {
+  width: 100%;
+  height: 10%;
+  background-color: plum;
+}
+
+.menu {
+  transform: scale(1.5);
+}
+
+mat-icon {
+  transform: scale(0.7);
+}
