@@ -5,6 +5,7 @@ import {FeedbackComponent} from '../feedback/feedback.component';
 import {FormComponent} from '../template-form/form.component';
 import {ReactiveFormComponent} from '../reactive-form/reactive-form.component';
 import {PageNotFoundComponent} from '../page-not-found/page-not-found.component';
+import {FinnkinoComponent} from '../finnkino/finnkino.component';
 
 @Component({
   selector: 'app-sidenav',
@@ -26,6 +27,7 @@ export class SidenavComponent implements OnInit {
       { path: 'feedback', component: FeedbackComponent },
       { path: 'template-form', component: FormComponent },
       { path: 'reactive-form', component: ReactiveFormComponent },
+      {path : 'finnkino', component: FinnkinoComponent },
       { path: '**', component: PageNotFoundComponent },
       { path: '', component: PageNotFoundComponent }
     ];

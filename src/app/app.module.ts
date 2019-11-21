@@ -9,7 +9,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { FeedbackComponent } from './feedback/feedback.component';
 import {
   MatCardModule,
-  MatCheckboxModule,
+  MatCheckboxModule, MatExpansionModule,
   MatFormFieldModule,
   MatIconModule,
   MatInputModule, MatListModule,
@@ -23,6 +23,7 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import {RouterModule, Routes} from '@angular/router';
 import { SidenavComponent } from './sidenav/sidenav.component';
+import { FinnkinoComponent } from './finnkino/finnkino.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     ReactiveFormComponent,
     PageNotFoundComponent,
     SidenavComponent,
+    FinnkinoComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,7 +52,8 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     MatCheckboxModule,
     RouterModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]
