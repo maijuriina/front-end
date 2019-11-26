@@ -24,6 +24,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import {RouterModule, Routes} from '@angular/router';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { FinnkinoComponent } from './finnkino/finnkino.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,9 @@ import { FinnkinoComponent } from './finnkino/finnkino.component';
     RouterModule,
     MatSidenavModule,
     MatListModule,
-    MatExpansionModule
+    MatExpansionModule,
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

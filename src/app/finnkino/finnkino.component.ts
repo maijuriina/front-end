@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {NewsService} from '../services/news.service';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-finnkino',
@@ -8,12 +9,12 @@ import {NewsService} from '../services/news.service';
 })
 
 export class FinnkinoComponent implements OnInit {
-  kinoData: any;
+  kinoData$: Observable<any>;
 
   constructor(private kinoService: NewsService) {
   }
 
   ngOnInit() {
-    this.kinoData = this.kinoService.getData();
+    this.kinoData$ = this.kinoService.getData();
   }
 }

@@ -1,11 +1,12 @@
 <div class="body">
+  <h1>Finnkino News</h1>
   <mat-accordion>
-    <mat-expansion-panel>
+    <mat-expansion-panel *ngFor="let newsItem of kinoData$ | async">
       <mat-expansion-panel-header>
-        <mat-panel-title>Header title</mat-panel-title>
-        <mat-panel-description>Description</mat-panel-description>
+        <mat-panel-title>{{newsItem.PublishDate}}{{newsItem.Title}}</mat-panel-title>
+        <mat-panel-description>{{newsItem.HTMLLead}}{{newsItem.NewsArticleCategory}}{{newsItem.ThumbnailURL}}</mat-panel-description>
       </mat-expansion-panel-header>
-       {{kinoService.getData()}}
+      {{newsItem.HTMLContent}}<img src="{{newsItem.ImageURL}}">
     </mat-expansion-panel>
   </mat-accordion>
 </div>
