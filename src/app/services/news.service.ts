@@ -1,11 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { NewsItem } from '../finnkino/news-item';
-import { of } from 'rxjs';
 import { map } from 'rxjs/operators';
-import * as xml2js from 'xml2js';
 import { parseString } from 'xml2js';
-import { HttpClientModule } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({

@@ -25,6 +25,7 @@ import {RouterModule, Routes} from '@angular/router';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { FinnkinoComponent } from './finnkino/finnkino.component';
 import {HttpClientModule} from '@angular/common/http';
+import { NewsFilterPipe } from './pipes/news-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import {HttpClientModule} from '@angular/common/http';
     PageNotFoundComponent,
     SidenavComponent,
     FinnkinoComponent,
+    NewsFilterPipe,
   ],
   imports: [
     BrowserModule,

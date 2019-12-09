@@ -1,12 +1,15 @@
 <div class="body">
   <h1>Finnkino News</h1>
+  <mat-form-field>
+    <input matInput placeholder="Search" [(ngModel)]="searchTerm">
+  </mat-form-field>
   <mat-accordion>
-    <mat-expansion-panel *ngFor="let newsItem of kinoData$ | async">
+    <mat-expansion-panel *ngFor="let newsItem of kinoData$ | async | newsFilter: searchTerm">
       <mat-expansion-panel-header>
-        <mat-panel-title>{{newsItem.PublishDate}}{{newsItem.Title}}</mat-panel-title>
-        <mat-panel-description>{{newsItem.HTMLLead}}{{newsItem.NewsArticleCategory}}{{newsItem.ThumbnailURL}}</mat-panel-description>
+        <mat-panel-title><img class="thumbnail" src="{{newsItem.ThumbnailURL}}"><div class="date">{{newsItem.PublishDate | date: 'mediumDate'}}</div></mat-panel-title>
+        <mat-panel-description>{{newsItem.Title}}</mat-panel-description>
       </mat-expansion-panel-header>
-      {{newsItem.HTMLContent}}<img src="{{newsItem.ImageURL}}">
+      <img class="contentImg" src="{{newsItem.ImageURL}}"><div>{{newsItem.HTMLContent}}</div>
     </mat-expansion-panel>
   </mat-accordion>
 </div>

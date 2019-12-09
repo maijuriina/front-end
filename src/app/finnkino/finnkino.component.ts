@@ -10,6 +10,7 @@ import {Observable} from 'rxjs';
 
 export class FinnkinoComponent implements OnInit {
   kinoData$: Observable<any>;
+  searchTerm: any;
 
   constructor(private kinoService: NewsService) {
   }

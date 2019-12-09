@@ -8,3 +8,23 @@ h1 {
   font-family: Constantia, serif;
   text-align: center;
 }
+
+mat-expansion-panel-header {
+  height: 100%;
+}
+
+mat-panel-description {
+  height: 25px;
+  line-height: 25px;
+}
+
+.thumbnail {
+  width: 70px;
+  margin: 0;
+  padding: 0;
+}
+
+.date {
+  padding-left: 10px;
+  font-weight: lighter;
+}
