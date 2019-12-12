@@ -14,20 +14,27 @@ import {
   MatIconModule,
   MatInputModule, MatListModule,
   MatSidenavModule,
-  MatSliderModule, MatSlideToggleModule
+  MatSliderModule
 } from '@angular/material';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { FormComponent } from './template-form/form.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import {RouterModule, Routes} from '@angular/router';
+import {RouterModule} from '@angular/router';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { FinnkinoComponent } from './finnkino/finnkino.component';
 import {HttpClientModule} from '@angular/common/http';
 import { NewsFilterPipe } from './pipes/news-filter.pipe';
 import { AdminLoginComponent } from './adminview/admin-login/admin-login.component';
 import { AdminViewComponent } from './adminview/admin-view/admin-view.component';
+import {AngularFireModule} from '@angular/fire';
+import {environment} from '../environments/environment';
+import {AngularFireAuthModule} from '@angular/fire/auth';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
+import * as firebase from 'firebase';
+
+firebase.initializeApp(environment.firebase);
 
 @NgModule({
   declarations: [
@@ -62,7 +69,9 @@ import { AdminViewComponent } from './adminview/admin-view/admin-view.component'
     MatListModule,
     MatExpansionModule,
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireAuthModule,
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
