@@ -6,6 +6,9 @@ import { FormComponent } from './template-form/form.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {FinnkinoComponent} from './finnkino/finnkino.component';
+import {AdminLoginComponent} from './adminview/admin-login/admin-login.component';
+import {AdminViewComponent} from './adminview/admin-view/admin-view.component';
+import {AuthenticationGuard} from './authentication.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: '/reactiveForm', pathMatch: 'full' },
@@ -14,6 +17,8 @@ const routes: Routes = [
   { path: 'form', component: FormComponent },
   { path: 'finnkino', component: FinnkinoComponent },
   { path: 'reactiveForm', component: ReactiveFormComponent },
+  { path: 'adminLogin', component: AdminLoginComponent },
+  { path: 'adminView', component: AdminViewComponent, canActivate: [AuthenticationGuard]},
   { path: '**', component: PageNotFoundComponent }
 ];
 

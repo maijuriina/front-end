@@ -26,6 +26,8 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { FinnkinoComponent } from './finnkino/finnkino.component';
 import {HttpClientModule} from '@angular/common/http';
 import { NewsFilterPipe } from './pipes/news-filter.pipe';
+import { AdminLoginComponent } from './adminview/admin-login/admin-login.component';
+import { AdminViewComponent } from './adminview/admin-view/admin-view.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,8 @@ import { NewsFilterPipe } from './pipes/news-filter.pipe';
     SidenavComponent,
     FinnkinoComponent,
     NewsFilterPipe,
+    AdminLoginComponent,
+    AdminViewComponent,
   ],
   imports: [
     BrowserModule,

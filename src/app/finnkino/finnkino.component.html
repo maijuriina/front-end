@@ -9,7 +9,7 @@
         <mat-panel-title><img class="thumbnail" src="{{newsItem.ThumbnailURL}}"><div class="date">{{newsItem.PublishDate | date: 'mediumDate'}}</div></mat-panel-title>
         <mat-panel-description>{{newsItem.Title}}</mat-panel-description>
       </mat-expansion-panel-header>
-      <img class="contentImg" src="{{newsItem.ImageURL}}"><div>{{newsItem.HTMLContent}}</div>
+      <img class="contentImg" src="{{newsItem.ImageURL}}">{{newsItem.HTMLContent}}
     </mat-expansion-panel>
   </mat-accordion>
 </div>

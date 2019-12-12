@@ -1,0 +1,18 @@
+mat-card-title {
+  text-align: center;
+  margin: 5px;
+}
+
+mat-card {
+  text-align: center;
+}
+
+mat-form-field {
+  display: block;
+  width: 20%;
+  margin: 0 auto;
+}
+
+button {
+  margin: 5px;
+}
