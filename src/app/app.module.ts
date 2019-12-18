@@ -32,10 +32,8 @@ import {AngularFireModule} from '@angular/fire';
 import {environment} from '../environments/environment';
 import {AngularFireAuthModule} from '@angular/fire/auth';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
-import * as firebase from 'firebase';
 import { ExchangeRatesComponent } from './exchange-rates/exchange-rates.component';
 
-firebase.initializeApp(environment.firebase);
 
 @NgModule({
   declarations: [
@@ -73,7 +71,8 @@ firebase.initializeApp(environment.firebase);
     BrowserModule,
     HttpClientModule,
     AngularFireAuthModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -12,7 +12,7 @@ import {AuthenticationGuard} from './authentication.guard';
 import {ExchangeRatesComponent} from './exchange-rates/exchange-rates.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/reactiveForm', pathMatch: 'full' },
+  { path: '', redirectTo: '/feedback', pathMatch: 'full' },
   { path: 'calculator', component: CalculatorComponent },
   { path: 'feedback', component: FeedbackComponent },
   { path: 'form', component: FormComponent },

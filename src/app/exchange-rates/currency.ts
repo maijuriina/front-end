@@ -1,7 +1,9 @@
 export class Currency {
-  rates: string;
+  name: string;
+  rate: number;
 
-  constructor(rates: string) {
-    this.rates = rates;
+  constructor(name: string, rate: number) {
+    this.name = name;
+    this.rate = rate;
   }
 }

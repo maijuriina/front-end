@@ -16,5 +16,5 @@
       <mat-card-title><span>Exchange rate</span></mat-card-title>
     </mat-card>
   </mat-card>
-  <div class="testField" *ngFor="let currency of ratesData$">{{currency}}</div>
+  <p *ngFor="let currency of ratesData$ | async">{{currency.value}}></p>
 </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthenticationService } from '../../services/authentication.service';
 
 @Component({
   selector: 'app-admin-view',
@@ -11,5 +12,4 @@ export class AdminViewComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }
