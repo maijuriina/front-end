@@ -33,6 +33,7 @@ import {environment} from '../environments/environment';
 import {AngularFireAuthModule} from '@angular/fire/auth';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
 import * as firebase from 'firebase';
+import { ExchangeRatesComponent } from './exchange-rates/exchange-rates.component';
 
 firebase.initializeApp(environment.firebase);
 
@@ -49,6 +50,7 @@ firebase.initializeApp(environment.firebase);
     NewsFilterPipe,
     AdminLoginComponent,
     AdminViewComponent,
+    ExchangeRatesComponent,
   ],
   imports: [
     BrowserModule,

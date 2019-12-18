@@ -1,0 +1,43 @@
+.body {
+  min-height: 100vh;
+  display: flex;
+}
+
+.allContainer {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.testField {
+  height: 200px;
+  width: 200px;
+  background-color: plum;
+}
+
+mat-card-title {
+  display: inline-flex;
+}
+
+#fromCurrency, #toCurrency {
+  width: 40%;
+  height: 70px;
+  display: inline-flex;
+  justify-content: center;
+  margin: 2%;
+}
+
+#fromCurrency {
+  background-color: mintcream;
+}
+
+#toCurrency {
+  background-color: lavender;
+}
+
+#exchangeRate {
+  width: 89%;
+  height: 70px;
+  margin: 2%;
+  display: inline-flex;
+  justify-content: center;
+}
