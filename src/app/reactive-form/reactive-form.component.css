@@ -1,5 +1,4 @@
 h1 {
-  font-family: Constantia, serif;
   text-align: center;
 }
 
@@ -10,6 +9,8 @@ mat-card-title {
 
 mat-card {
   text-align: center;
+  width: 50%;
+  margin: 0 auto;
 }
 
 mat-form-field {
