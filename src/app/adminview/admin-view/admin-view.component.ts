@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from '../../services/authentication.service';
+import {BehaviorSubject} from 'rxjs';
 
 @Component({
   selector: 'app-admin-view',
@@ -7,9 +8,15 @@ import { AuthenticationService } from '../../services/authentication.service';
   styleUrls: ['./admin-view.component.css']
 })
 export class AdminViewComponent implements OnInit {
+  private currentUser: BehaviorSubject<string>;
 
-  constructor() { }
+  constructor(private service: AuthenticationService) { }
 
   ngOnInit() {
+    this.checkLoggedIn();
+  }
+
+  checkLoggedIn() {
+    this.currentUser = this.service.checkLoggedInUser();
   }
 }

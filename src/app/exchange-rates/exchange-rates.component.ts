@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {RatesService} from '../services/rates.service';
 import {Observable} from 'rxjs';
+import {Currency} from './currency';
 
 @Component({
   selector: 'app-exchange-rates',
@@ -9,18 +10,14 @@ import {Observable} from 'rxjs';
 })
 export class ExchangeRatesComponent implements OnInit {
   ratesData$: Observable<any>;
+  currency: Currency;
 
-  constructor(private ratesService: RatesService) { }
+  constructor(private ratesService: RatesService) {
+    // this.selected = new Currency('', 0);
+  }
 
   ngOnInit() {
     this.ratesData$ = this.ratesService.getData();
-
-    // this.ratesService.getData().subscribe(result => {
-      // console.log(result);
-    // }, err => {
-      // console.log(err);
-    // }, () => {
-      // console.log('Complete!');
-    // });
   }
+
 }

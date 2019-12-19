@@ -17,7 +17,7 @@ export class AuthenticationGuard implements CanActivate {
     return this.authenticationService.getLoggedInUser().pipe(
       take(1),
       map(authState => Boolean(authState)),
-      tap(auth => !auth ? this.router.navigate(['adminView']) : true) // checks through service and there from FireBase
+      tap(auth => !auth ? this.router.navigate(['adminLogin']) : true) // checks through service and there from FireBase
     );
   }
 }

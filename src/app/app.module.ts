@@ -12,7 +12,7 @@ import {
   MatCheckboxModule, MatExpansionModule,
   MatFormFieldModule,
   MatIconModule,
-  MatInputModule, MatListModule,
+  MatInputModule, MatListModule, MatSelectModule,
   MatSidenavModule,
   MatSliderModule
 } from '@angular/material';
@@ -33,6 +33,7 @@ import {environment} from '../environments/environment';
 import {AngularFireAuthModule} from '@angular/fire/auth';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
 import { ExchangeRatesComponent } from './exchange-rates/exchange-rates.component';
+import {AuthenticationService} from './services/authentication.service';
 
 
 @NgModule({
@@ -72,7 +73,8 @@ import { ExchangeRatesComponent } from './exchange-rates/exchange-rates.componen
     HttpClientModule,
     AngularFireAuthModule,
     AngularFirestoreModule,
-    AngularFireModule.initializeApp(environment.firebase)
+    AngularFireModule.initializeApp(environment.firebase),
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

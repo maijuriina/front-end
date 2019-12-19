@@ -1,20 +1,32 @@
 <div class="body">
   <mat-card class="allContainer">
     <mat-card id="fromCurrency">
-      <mat-card-title><span>From currency</span></mat-card-title>
+      <mat-card-title>From currency</mat-card-title>
       <mat-card-content>
         <mat-form-field>
           <input matInput type="number" label="fromCurrencyAmount" placeholder="Amount">
         </mat-form-field>
+        <mat-form-field>
+          <mat-select placeholder="From" [(value)]="currency">
+            <mat-option *ngFor="let currency of ratesData$ | async" value="{{currency}}">
+              {{currency.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <p>{{currency}}</p>
       </mat-card-content>
-
   </mat-card>
   <mat-card id="toCurrency">
-    <mat-card-title><span>To currency</span></mat-card-title>
+    <mat-card-title>To currency</mat-card-title>
+    <mat-card-content>
+      <mat-form-field>
+        <mat-select placeholder="To">
+          <mat-option *ngFor="let currency of ratesData$ | async" value="{{currency.name}}">
+            {{currency.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-card-content>
   </mat-card>
-    <mat-card id="exchangeRate">
-      <mat-card-title><span>Exchange rate</span></mat-card-title>
-    </mat-card>
   </mat-card>
-  <p *ngFor="let currency of ratesData$ | async">{{currency.value}}></p>
 </div>

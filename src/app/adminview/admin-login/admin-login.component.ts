@@ -17,7 +17,7 @@ export class AdminLoginComponent implements OnInit {
   }
 
   // forwards username and password to the authentication service
-  onLogin(username, password) {
-    this.loginService.login(username.value, password.value);
+  onLogin() {
+    this.loginService.login(this.username, this.password);
   }
 }
