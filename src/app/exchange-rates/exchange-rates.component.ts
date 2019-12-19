@@ -9,15 +9,27 @@ import {Currency} from './currency';
   styleUrls: ['./exchange-rates.component.css']
 })
 export class ExchangeRatesComponent implements OnInit {
-  ratesData$: Observable<any>;
-  currency: Currency;
+  ratesData$: Observable<Currency[]>;
+  fromCurrency: Currency;
+  toCurrency: Currency;
+  exchangeRate: number;
+  conversionValue: number;
+  amount: number;
+  result: number;
+  rounded: string;
 
   constructor(private ratesService: RatesService) {
-    // this.selected = new Currency('', 0);
   }
 
   ngOnInit() {
     this.ratesData$ = this.ratesService.getData();
+  }
+
+  calculateRateExchange() {
+    this.exchangeRate = Number(this.fromCurrency) / Number(this.toCurrency);
+    this.conversionValue = 1 / this.exchangeRate;
+    this.result = Number(this.amount) * Number(this.conversionValue);
+    this.rounded = this.result.toFixed(2);
   }
 
 }

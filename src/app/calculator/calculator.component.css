@@ -1,5 +1,4 @@
 header {
-  font-family: Constantia, serif;
   width: 100%;
   display: block;
   margin: auto;
@@ -13,7 +12,7 @@ h1 {
   width: 30%;
   margin: auto;
   display: block;
-  background-color: darkcyan;
+  background-color: powderblue;
   padding: 20px 15px;
   border-right: 3px solid darkslategrey;
   border-bottom: 3px solid darkslategrey;
@@ -25,12 +24,12 @@ h1 {
 
 .operatBtn {
   padding: 5px;
-  background-color: aquamarine;
+  background-color: lightseagreen;
 }
 
 .calcScreen {
   background-color: dimgray;
-  color: aquamarine;
+  color: paleturquoise;
   width: 92%;
   height: 40px;
   margin: auto;
