@@ -1,6 +1,4 @@
 import { Injectable } from '@angular/core';
-import * as firebase from 'firebase';
-import {AdminViewComponent} from '../adminview/admin-view/admin-view.component';
 import {Router, RouterModule, Routes} from '@angular/router';
 import {AngularFireAuth, AngularFireAuthModule} from '@angular/fire/auth';
 import {SidenavComponent} from '../sidenav/sidenav.component';
@@ -19,7 +17,7 @@ export class AuthenticationService {
       }
     });
   }
-  // uusi käyttäjä: admina.autenttinen@gmail.com, pw Admina1234
+  // uusi käyttäjä: admina.autenttinen@gmail.com, Admina1234
   login(username, password) {
     // then() checks if login returns an OK as result, if not, it catches error
   return this.afAuth.auth.signInWithEmailAndPassword(username, password).then(result => {

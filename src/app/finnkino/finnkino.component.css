@@ -1,16 +1,24 @@
 .body {
   width: 70%;
   margin: auto;
-  display: block;
+  display: flex;
+}
+
+mat-accordion {
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
-  font-family: Constantia, serif;
   text-align: center;
 }
 
 mat-expansion-panel-header {
   height: 100%;
+}
+
+mat-expansion-panel {
+  flex-direction: row;
 }
 
 mat-panel-description {
@@ -32,4 +40,16 @@ mat-panel-title {
 
 .date {
   padding-left: 10px;
+}
+
+.contentImg {
+  height: 150px;
+  float: left;
+  display: inline-flex;
+}
+
+.leadContainer {
+  float: right;
+  display: inline-flex;
+  word-break: break-word;
 }

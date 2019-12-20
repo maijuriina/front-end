@@ -2,35 +2,39 @@
   <mat-card class="allContainer">
     <h1>Currency converter</h1>
     <mat-card id="fromCurrency">
-      <mat-card-title>From currency</mat-card-title>
+      <mat-card-title>1. From currency</mat-card-title>
       <mat-card-content>
         <mat-form-field>
-          <mat-select placeholder="Pick currency" [(value)]="fromCurrency" (change)="calculateRateExchange()">
+          <mat-select placeholder="Pick currency" [(value)]="fromCurrency" (valueChange)="calculateRateExchange()">
             <mat-option *ngFor="let currency of ratesData$ | async" value="{{currency.rate}}">
               {{currency.name}}
             </mat-option>
           </mat-select>
         </mat-form-field>
-      </mat-card-content>
-      <mat-card-content>
-        <mat-form-field>
-          <input matInput type="number" placeholder="Amount" [(ngModel)]="amount" (change)="calculateRateExchange()">
-        </mat-form-field>
+        <p>Currency to convert</p>
       </mat-card-content>
   </mat-card>
   <mat-card id="toCurrency">
-    <mat-card-title>To currency</mat-card-title>
+    <mat-card-title>2. To currency</mat-card-title>
     <mat-card-content>
       <mat-form-field>
-        <mat-select placeholder="Pick currency" [(value)]="toCurrency" (change)="calculateRateExchange()">
+        <mat-select placeholder="Pick currency" [(value)]="toCurrency" (valueChange)="calculateRateExchange()">
           <mat-option *ngFor="let currency of ratesData$ | async" value="{{currency.rate}}">
             {{currency.name}}
           </mat-option>
         </mat-select>
       </mat-form-field>
-      <p>1 to {{toCurrency}}</p>
+      <p>1 to {{toCurrency}} rate</p>
     </mat-card-content>
   </mat-card>
+    <mat-card id="amount">
+      <mat-card-title>3. Amount</mat-card-title>
+    <mat-card-content>
+      <mat-form-field>
+        <input matInput type="number" placeholder="Amount" [(ngModel)]="amount" (ngModelChange)="calculateRateExchange()">
+      </mat-form-field>
+    </mat-card-content>
+    </mat-card>
     <mat-card id="conversion">
       <mat-card-title>Conversion</mat-card-title>
       <mat-card-content><h2>{{amount}} = {{rounded}}</h2></mat-card-content>

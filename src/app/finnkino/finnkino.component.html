@@ -1,4 +1,5 @@
 <div class="body">
+  <mat-card>
   <h1>Finnkino News</h1>
   <mat-form-field>
     <input matInput placeholder="Search" [(ngModel)]="searchTerm">
@@ -9,7 +10,8 @@
         <mat-panel-title><img class="thumbnail" src="{{newsItem.ThumbnailURL}}"><div class="date">{{newsItem.PublishDate | date: 'mediumDate'}}</div></mat-panel-title>
         <mat-panel-description>{{newsItem.Title}}</mat-panel-description>
       </mat-expansion-panel-header>
-      <img class="contentImg" src="{{newsItem.ImageURL}}">{{newsItem.HTMLContent}}
+      <img class="contentImg" src="{{newsItem.ImageURL}}"><div class="leadContainer">{{newsItem.HTMLLead}}</div>
     </mat-expansion-panel>
   </mat-accordion>
+  </mat-card>
 </div>

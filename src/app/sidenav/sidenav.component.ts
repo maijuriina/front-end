@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthenticationService} from '../services/authentication.service';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-sidenav',
@@ -8,13 +9,13 @@ import {AuthenticationService} from '../services/authentication.service';
 })
 
 export class SidenavComponent implements OnInit {
+  userEmail$: Observable<string>;
 
-  events: string[] = [];
-  opened: boolean;
-
-  constructor(private service: AuthenticationService) { }
+  constructor(private service: AuthenticationService) {
+  }
 
   ngOnInit() {
+    this.userEmail$ = this.service.checkLoggedInUser();
   }
 
   signOut() {

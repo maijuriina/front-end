@@ -17,7 +17,7 @@ export class NewsService {
   }
   // "observable" waits for an answer
   getData(): Observable<any> {
-    return this.httpClient.get(this.newsUrl).pipe(map(response => {
+    return this.httpClient.get(this.newsUrl,{responseType: 'text'}).pipe(map(response => {
       let newsData: NewsItem[] = [];
       // tslint:disable-next-line:only-arrow-functions
       parseString(response, {trim: true, explicitArray: false, mergeAttrs: true}, function(err, result) {

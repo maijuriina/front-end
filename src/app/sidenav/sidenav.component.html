@@ -1,6 +1,5 @@
 <mat-sidenav-container>
-  <mat-sidenav #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')"
-               (closed)="events.push('close!')">
+  <mat-sidenav #sidenav mode="side">
     <mat-nav-list>
       <a mat-list-item routerLink="/calculator" routerLinkActive="active"><mat-icon>dialpad</mat-icon>Calculator</a>
       <a mat-list-item routerLink="/feedback" routerLinkActive="active"><mat-icon>comment</mat-icon> Feedback</a>
@@ -9,10 +8,10 @@
       <a mat-list-item routerLink="/finnkino" routerLinkActive="active"><mat-icon>menu_book</mat-icon> Finnkino news</a>
       <a mat-list-item routerLink="/exchangeRates" routerLinkActive="active"><mat-icon>euro</mat-icon> Exchange rates</a>
       <a mat-list-item routerLink="/adminLogin" routerLinkActive="active"><mat-icon>vpn_key</mat-icon> Login</a>
-      <button mat-raised-button (click)="signOut()">Logout</button>
+      <button class="buttonLogout" mat-raised-button (click)="signOut()">Logout</button>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <button mat-button color="primary" (click)="sidenav.toggle()"><mat-icon class="menu">menu</mat-icon></button>
+    <button class="buttonMenu" mat-button color="primary" (click)="sidenav.toggle()"><mat-icon class="menu">menu</mat-icon></button>
   </mat-sidenav-content>
 </mat-sidenav-container>

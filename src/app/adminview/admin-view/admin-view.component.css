@@ -1,21 +1,33 @@
+.body {
+  display: flex;
+  width: 100%;
+}
+
+.allContainer {
+  width: 50%;
+  height: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  text-align: center;
+}
+
+
 mat-card-title {
   text-align: center;
-  margin: 5px;
+  margin: 2%;
 }
 
 mat-card {
-  text-align: center;
+  display: inline-flex;
+  flex-direction: column;
   width: 80%;
-}
-
-mat-form-field {
-  display: block;
-  width: 20%;
-  margin: 0 auto;
-}
-
-button {
-  margin: 5px;
+  height: 50%;
+  align-items: center;
+  justify-content: center;
 }
 
 .userEmail {
